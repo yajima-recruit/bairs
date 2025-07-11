@@ -1,0 +1,21 @@
+/*このページだけに有効なcss*/
+body {
+	height: 100vh;
+}
+
+h1 {
+	color: #FF00FF;
+	margin-bottom: 0;
+}
+
+#progress{
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.space{
+	margin: 15px 0;
+}

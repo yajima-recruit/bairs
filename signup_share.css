@@ -1,0 +1,60 @@
+/*このページだけに有効なcss*/
+body {
+	height: 100vh;
+}
+
+h1 {
+	color: #FF00FF;
+}
+
+textarea {
+	resize: none;
+	width: 98%;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.login{
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+button {
+	padding: 8px 15px;
+	font-size: 14px;
+	cursor: pointer;
+	background-color: #3498db;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+#userid,
+#pass,
+#pass-again {
+	width: 200px;
+	
+}
+
+.block {
+	margin: 10px 0px;
+}
+
+#answer{
+	width: 98%;
+}
+
+input{
+	font-size: 20px;
+	padding: 2px;
+}
+
+#error-message{
+	margin-bottom: 10px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bairs.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="bairs.ico" type="image/x-icon">
+
+    <!-- ページ全体に共通の CSS -->
+    <link rel="stylesheet" href="share.css">
+
+    <!-- このページだけに共通の CSS -->
+    <link rel="stylesheet" href="signup_share.css">
+
+    <!-- PC 用の CSS -->
+    <link rel="stylesheet" media="(min-width: 601px)" href="signup_pc.css">
+
+    <!-- スマホ用の CSS -->
+    <link rel="stylesheet" media="(max-width: 600px)" href="signup_mobile.css">
+
+    <!-- タイトル -->
+    <title>新規登録</title>
+</head>
+
+<body class="middle">
+    <!--このdivはコンテンツを縦並びに直すためのもの-->
+    <div>
+        <h1 class="center">新規登録</h1>
+
+        <div class="middle">
+            <div>
+                <div class="block">
+                    <div>ユーザーID</div>
+                    <input type="text" id="userid" name="userid" oninput="this.value=this.value.replace(/[^a-z0-9_@-]/g, '')"
+                        maxlength="20" placeholder="20文字以内">
+                    <div>小文字 数字 _ - @のみ使えます</div>
+                </div>
+                <div class="block">
+                    <div>パスワード</div>
+                    <input type="password" id="pass" name="pass" oninput="this.value=this.value.replace(/[^\x01-\x7E]/g, '')">
+                    <button id="btn_passview">表示</button>
+                </div>
+                <div class="block">
+                    <div>確認</div>
+                    <input type="password" id="pass-again" name="pass-again" 
+                        oninput="this.value=this.value.replace(/[^\x01-\x7E]/g, '')">
+                    <button id="btn_passview_again">表示</button>
+                </div>
+
+                <div>
+                    <div>秘密の質問</div>
+                    <textarea id="question" name="question" rows="4" maxlength="60" placeholder="60文字以内 例:父親の名前は？"></textarea>
+                </div>
+
+                <div class="block">
+                    <div>質問の答え</div>
+                    <input type="text" id="answer" name="answer" maxlength="60" placeholder="60文字以内"></input>
+                </div>
+            </div>
+        </div>
+
+        <!-- エラーメッセージ -->
+        <div id="error-message" class="center"></div>
+
+        <div class="center">
+            <button type="button" onclick="search()">次へ</button>
+        </div>
+
+        <div class="left login">
+            アカウントをお持ちの方は<a href="login.html">こちら</a>
+        </div>
+    </div>
+
+    <!--ここから先はaudio関連-->
+    <audio id="ClickSound" src="sound/click_sound.mp3"></audio>
+
+    <script src="pass_view_signup.js"></script>
+    <script src="sound.js"></script>
+    <script src="error.js"></script>
+    <script src="signup.js"></script>
+</body>
+
+</html>

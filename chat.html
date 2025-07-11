@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="chat_share.css">
+    <!-- PC用のcss -->
+    <link rel="stylesheet" media="(min-width: 601px)" href="chat_pc.css">
+    <!-- スマホ用のcss -->
+    <link rel="stylesheet" media="(max-width: 600px)" href="chat_mobile.css">
+    <title>チャット</title>
+</head>
+
+<body>
+    <h1>チャット</h1>
+    <hr id="hr">
+    <ul id="post-list">
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span><button class="btn" onclick="submit()">abababababababababab</button></span>
+                    <span>ああああああああああ</span>
+                </div>
+                <div class="post-text">こんにちは</div>
+                <div class="post-info post-time">
+                    <span>2024-01-11</span>
+                    <span>14:19</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="post">
+                <div class="post-info">
+                    <span>test456</span>
+                    <span>テスト君2号</span>
+                </div>
+                <div class="post-text">よろしく～</div>
+                <div class="post-info  post-time">
+                    <span>2024-01-11</span>
+                    <span>14:20</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div id="under-element">
+        <div class="scrol-area">
+            <div class="scrollable-area">
+                <!-- 3行の内容を表示 -->
+                <div><strong>あいさつ</strong></div>
+                <div class="scrollable-item" onclick="selectItem(this)">こんにちは</div>
+                <div class="scrollable-item" onclick="selectItem(this)">よろしく～</div>
+                <div class="scrollable-item" onclick="selectItem(this)">またねー</div>
+    
+                <div><strong>質問</strong></div>
+                <div class="scrollable-item" onclick="selectItem(this)">どこにいる？</div>
+                <div class="scrollable-item" onclick="selectItem(this)">ちょうしどう？</div>
+                <div class="scrollable-item" onclick="selectItem(this)">今、暇？</div>
+    
+                <div><strong>回答</strong></div>
+                <div class="scrollable-item" onclick="selectItem(this)">学校</div>
+                <div class="scrollable-item" onclick="selectItem(this)">家</div>
+                <div class="scrollable-item" onclick="selectItem(this)">○</div>
+                <div class="scrollable-item" onclick="selectItem(this)">✕</div>
+            </div>
+        </div>
+        <div class="button-area">
+            <button id="scroll-btn" onclick="scrollToBottom()"><img id="bottom_vector" src="image/bottom_vector.png"></button>
+            <button type="button" id="submit-btn" onclick="sendPost()">投稿</button>
+        </div>
+    </div>
+
+    <div id="bottom-element">
+        <button class="under-button" onclick="submit('home')">
+            <img class="formbutton" src="image/home.png" alt="ホーム">
+        </button>
+        <button class="under-button" onclick="submit('match')">
+            <img class="formbutton" src="image/matching.png" alt="マッチング">
+        </button>
+        <button class="under-button" onclick="submit('chat')">
+            <img class="formbutton" src="image/keijibann.png" alt="掲示板">
+        </button>
+        <button class="under-button" onclick="submit('profile')">
+            <img class="formbutton" src="image/profile.png" alt="プロフィール">
+        </button>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+
+</html>

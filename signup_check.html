@@ -1,0 +1,93 @@
+<!--これはビュー用のhtmlです。ここで仮の値を用意しますので、デザインをしてください。-->
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="bairs.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="bairs.ico" type="image/x-icon">
+
+    <!--ページ全体に共通のcss-->
+    <link rel="stylesheet" href="share.css">
+
+    <!--このページだけに共通のcss-->
+    <link rel="stylesheet" href="signup_check_share.css">
+
+    <!--PC用のcss-->
+    <link rel="stylesheet" media="(min-width: 601px)" href="signup_check_pc.css">
+
+    <!--スマホ用のcss-->
+    <link rel="stylesheet" media="(max-width: 600px)" href="signup_check_mobile.css">
+
+    <!--タイトル-->
+    <title>確認画面</title>
+
+    <style>
+        #icon-image{
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <h1>登録確認</h1>
+        <div id="profile-img">
+            <img id="icon-image" src="image/icon/boy_01.png" alt="icon">
+        </div>
+        <div>
+            <label>ニックネーム</label>
+            <div id="name">テスト太郎</div>
+        </div>
+        <div>
+            <label>学籍番号</label>
+            <span>非公開</span>
+        </div>
+        <div>
+            <label>性別:</label>
+            <span>回答しない</span>
+        </div>
+        <div>
+            <label>血液型:</label>
+            <span>わからない</span>
+        </div>
+        <div>
+            <label>趣味</label>
+            <ul>
+                <li>項目1</li>
+                <li>項目2</li>
+                <li>項目3</li>
+            </ul>
+        </div>
+        <div>
+            <label>自己紹介</label>
+            <div>テストデータ</div>
+        </div>
+        <div>
+            <label>Instagram:</label>
+            <span>testtarou</span>
+        </div>
+        <div>
+            <label>X(旧Twitter):</label>
+            <span>@testtarou</span>
+        </div>
+        <div>
+            <label>TikTok</label>
+            <span>@testtarou</span>
+        </div>
+        <div class="center margin">
+            <form id="form">
+                <input type="hidden">
+            </form>
+            <button id="register" type="button" onclick="register()">登録</button>
+        </div>
+    </div>
+
+    <audio id="ClickSound" src="sound/click_sound.mp3"></audio>
+
+    <script src="sound.js"></script>
+    <script src="signup_check.js"></script>
+
+</body>
+
+</html>

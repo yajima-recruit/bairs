@@ -1,0 +1,67 @@
+h1{
+    margin: 20px 0;
+    text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+td, th {
+	background-color: #ffffff;
+	border: 1px solid #000000; /* セルごとに線を引く */
+}
+
+th{
+	text-align: center;
+    padding: 8px;
+}
+
+.id{
+    padding: 0;
+    text-align: center;
+}
+
+.btn{
+    font: inherit;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    width: 98%;
+}
+
+.info{
+    padding: 8px;
+}
+
+.hit{
+	text-align: right;
+}
+
+#bottom-element {
+    background-color: inherit;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.under-button {
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.space{
+    padding: 35px 0;
+}

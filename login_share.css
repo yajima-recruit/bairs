@@ -1,0 +1,46 @@
+/*このページに対してのみ有効なcss*/
+body{
+    height: 100vh;
+}
+
+h1{
+    color: #FF00FF;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.signup{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+input{
+    width: 200px;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.block{
+    margin: 10px 0px;
+}
+
+#error-message{
+    margin-bottom: 10px;
+}

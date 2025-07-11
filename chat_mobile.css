@@ -1,0 +1,27 @@
+#submit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    padding: 0;
+    margin: auto 0;
+}
+
+#scroll-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2; /* スクロールボタンを前面に表示 */
+    height: 40px;
+    padding: 0;
+    margin: auto 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+/* このwebサイト全体に共通のcss */
+body{
+    margin: 0;
+    padding: 0;
+    background: #ddffff;
+    background-repeat: none;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#error-message{
+    color: red;
+    font-size: 15px;
+}
+
+.formbutton {
+    background-color: transparent;
+    border: none;/* ボーダーをなしに設定 */
+    border-radius: 5px;/* ボーダーの角を丸くする */
+    cursor: pointer;/* カーソルをポインターに変更 */
+    width: 27px;
+    height: 27px;
+}

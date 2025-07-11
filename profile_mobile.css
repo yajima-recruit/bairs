@@ -1,0 +1,8 @@
+/* profile.jspのモバイル用のcss */
+.item{
+    font-size: 20px;
+}
+
+.profile{
+	margin: auto 15%;
+}

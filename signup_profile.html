@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="bairs.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="bairs.ico" type="image/x-icon">
+	
+	<link rel="stylesheet" href="share.css">
+	<link rel="stylesheet" href="signup_profile_share.css">
+	<link rel="stylesheet" media="(min-width: 601px)" href="signup_profile_pc.css">
+	<link rel="stylesheet" media="(max-width: 600px)" href="signup_profile_mobile.css">
+	<title>新規登録</title>
+</head>
+
+<body>
+	<div>
+		<h1>プロフィール登録</h1>
+
+		<form action="/bairs/signup_profile" method="post" id="form">
+			<strong>
+				<div>
+					<span>1.基本情報</span>
+					<span id="typeError" class="error-indicator">*必須</span>
+				</div>
+			</strong>
+
+			<table>
+				<tr>
+					<td>
+						<strong><label>アイコン</label></strong>
+					</td>
+					<td>
+						<div class="middle">
+							<div id="prev">&#9664;</div>
+							<div>
+								<img id="slideshow-image" data-name="boy_01" src="image/icon/boy_01.png"
+									alt="boy_01">
+							</div>
+							<div id="next">&#9654;</div>
+						</div>
+						<input type="hidden" id="selectedImageField" name="selecticon" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong><label>背景色</label></strong>
+					</td>
+					<td>
+						<input type="color" id="colorPicker" name="color" value="#ffffff" onchange="changeIconBackgroundColor()">
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						<strong>ニックネーム</strong>
+					</td>
+					<td>
+						<input type="text" id="name" name="name" placeholder="10文字以内" required maxlength="10">
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						<strong>学籍番号</strong>
+					</td>
+					<td>
+						<input type="text" id="snum" name="snum" placeholder="10文字以内 半角数字" required
+							oninput="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="10">
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						<strong>学籍番号の公開<strong>
+					</td>
+					<td>
+						<input type="radio" id="snumpublic01" name="snumpublic" value="true"><label
+							for="snumpublic01">公開する</label>
+						<input type="radio" id="snumpublic02" name="snumpublic" value="false"><label
+							for="snumpublic02">公開しない</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						<strong>性別</strong>
+					</td>
+					<td>
+						<input type="radio" id="gender01" name="gender" value="男"><label for="gender01">男</label>
+						<input type="radio" id="gender02" name="gender" value="女"><label for="gender02">女</label>
+						<input type="radio" id="gender03" name="gender" value="回答しない"><label
+							for="gender03">回答しない</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						<strong>血液型</strong>
+					</td>
+					<td>
+						<select name="bloodtype">
+							<option value="A">A型</option>
+							<option value="B">B型</option>
+							<option value="O">O型</option>
+							<option value="AB">AB型</option>
+							<option value="わからない">わからない</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			<div class="space1"></div>
+
+			<strong>
+				<div clas="ques">
+					<span>2.趣味を選択してください</span>
+					<span id="hobbyError" class="error-indicator">*必須</span>
+					<div>(※複数選択可)</div>
+				</div>
+			</strong>
+
+			<div class="space2"></div>
+
+			<strong>アウトドア系</strong>
+			<table border="2">
+				<tr>
+					<td><input type="checkbox" id="hobby01" name="hobby" value="スポーツ"><label for="hobby01">スポーツ</label>
+					</td>
+					<td><input type="checkbox" id="hobby02" name="hobby" value="スポーツ観戦"><label
+							for="hobby02">スポーツ観戦</label></td>
+					<td><input type="checkbox" id="hobby03" name="hobby" value="ショッピング"><label
+							for="hobby03">ショッピング</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby04" name="hobby" value="ドライブ"><label for="hobby04">ドライブ</label>
+					</td>
+					<td><input type="checkbox" id="hobby05" name="hobby" value="ツーリング"><label
+							for="hobby05">ツーリング</label></td>
+					<td><input type="checkbox" id="hobby06" name="hobby" value="釣り"><label for="hobby06">釣り</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby07" name="hobby" value="旅行"><label for="hobby07">旅行</label></td>
+					<td><input type="checkbox" id="hobby08" name="hobby" value="DIY"><label for="hobby08">DIY</label>
+					</td>
+					<td><input type="checkbox" id="hobby09" name="hobby" value="キャンプ"><label for="hobby09">キャンプ</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby10" name="hobby" value="登山"><label for="hobby10">登山</label></td>
+					<td><input type="checkbox" id="hobby11" name="hobby" value="ウォーキング"><label
+							for="hobby11">ウォーキング</label></td>
+					<td><input type="checkbox" id="hobby12" name="hobby" value="バーベキュー"><label
+							for="hobby12">バーベキュー</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby13" name="hobby" value="ダンス"><label for="hobby13">ダンス</label>
+					</td>
+					<td><input type="checkbox" id="hobby14" name="hobby" value="ヨガ"><label for="hobby14">ヨガ</label></td>
+					<td><input type="checkbox" id="hobby15" name="hobby" value="筋トレ"><label for="hobby15">筋トレ</label>
+					</td>
+				</tr>
+			</table>
+
+			<div class="space2"></div>
+
+			<strong>
+				<div>インドア系</div>
+			</strong>
+			<table border="2">
+				<!--インドア-->
+				<tr>
+					<td><input type="checkbox" id="hobby16" name="hobby" value="料理"><label for="hobby16">料理</label></td>
+					<td><input type="checkbox" id="hobby17" name="hobby" value="読書"><label for="hobby17">読書</label></td>
+					<td><input type="checkbox" id="hobby18" name="hobby" value="漫画"><label for="hobby18">漫画</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby19" name="hobby" value="音楽"><label for="hobby19">音楽</label></td>
+					<td><input type="checkbox" id="hobby20" name="hobby" value="楽器"><label for="hobby20">楽器</label></td>
+					<td><input type="checkbox" id="hobby21" name="hobby" value="映画鑑賞"><label for="hobby21">映画鑑賞</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby22" name="hobby" value="ドラマ"><label for="hobby22">ドラマ</label>
+					</td>
+					<td><input type="checkbox" id="hobby23" name="hobby" value="アニメ"><label for="hobby23">アニメ</label>
+					</td>
+					<td><input type="checkbox" id="hobby24" name="hobby" value="Youtube"><label
+							for="hobby24">Youtube</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby25" name="hobby" value="写真"><label for="hobby25">写真</label></td>
+					<td><input type="checkbox" id="hobby26" name="hobby" value="絵画"><label for="hobby26">絵画</label></td>
+					<td><input type="checkbox" id="hobby27" name="hobby" value="動画編集"><label for="hobby27">動画編集</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby28" name="hobby" value="プログラミング"><label
+							for="hobby28">プログラミング</label></td>
+					<td><input type="checkbox" id="hobby29" name="hobby" value="プラモデル"><label
+							for="hobby29">プラモデル</label></td>
+					<td><input type="checkbox" id="hobby30" name="hobby" value="手芸"><label for="hobby30">手芸</label></td>
+				</tr>
+			</table>
+
+			<div class="space2"></div>
+
+			<strong>
+				<div>その他</div>
+			</strong>
+			<table>
+				<!--その他-->
+				<tr>
+					<td class="checkbox-br">
+						<input type="checkbox" id="hobby31" name="hobby" value="テレビ・スマホゲーム">
+						<label for="hobby31">
+							テレビゲーム<br>
+							スマホゲーム
+						</label>
+					</td>
+					<td><input type="checkbox" id="hobby32" name="hobby" value="ボードゲーム"><label
+							for="hobby32">ボードゲーム</label></td>
+					<td><input type="checkbox" id="hobby33" name="hobby" value="カードゲーム"><label
+							for="hobby33">カードゲーム</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby34" name="hobby" value="ギャンブル"><label
+							for="hobby34">ギャンブル</label></td>
+					<td><input type="checkbox" id="hobby35" name="hobby" value="麻雀"><label for="hobby35">麻雀</label></td>
+					<td><input type="checkbox" id="hobby36" name="hobby" value="将棋"><label for="hobby36">将棋</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby37" name="hobby" value="ダーツ"><label for="hobby37">ダーツ</label>
+					</td>
+					<td><input type="checkbox" id="hobby38" name="hobby" value="カフェ巡り"><label
+							for="hobby38">カフェ巡り</label></td>
+					<td><input type="checkbox" id="hobby39" name="hobby" value="食べ歩き"><label for="hobby39">食べ歩き</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby40" name="hobby" value="お酒"><label for="hobby40">お酒</label></td>
+					<td><input type="checkbox" id="hobby41" name="hobby" value="カラオケ"><label for="hobby41">カラオケ</label>
+					</td>
+					<td><input type="checkbox" id="hobby42" name="hobby" value="サウナ"><label for="hobby42">サウナ</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby43" name="hobby" value="推し活"><label for="hobby43">推し活</label>
+					</td>
+					<td><input type="checkbox" id="hobby44" name="hobby" value="コスプレ"><label for="hobby44">コスプレ</label>
+					</td>
+					<td><input type="checkbox" id="hobby45" name="hobby" value="美容"><label for="hobby45">美容</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby46" name="hobby" value="ネイル"><label for="hobby46">ネイル</label>
+					</td>
+					<td><input type="checkbox" id="hobby47" name="hobby" value="ファッション"><label
+							for="hobby47">ファッション</label></td>
+					<td><input type="checkbox" id="hobby48" name="hobby" value="貯金"><label for="hobby48">貯金</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="hobby49" name="hobby" value="株"><label for="hobby49">株</label></td>
+					<td><input type="checkbox" id="hobby50" name="hobby" value="英会話"><label for="hobby50">英会話</label>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+
+			<div class="space1"></div>
+
+			<!-- メッセージ -->
+			<strong>
+				<div>
+					<span>3.自己紹介</span>
+					<span>(任意)</span>
+				</div>
+			</strong>
+			<textarea id="introduction" name="introduction" rows="5" cols="50"
+				placeholder="例:8年間書道をやってました。よろしくお願いします。"></textarea>
+
+			<div class="space1"></div>
+
+			<strong>
+				<div>
+					<span>4.その他SNS</span>
+					<span>(任意)</span>
+				</div>
+			</strong>
+
+			<table>
+				<tr>
+					<td class="as">
+						Instagram
+					</td>
+					<td>
+						<input type="text" id="Instagram" name="instagram" placeholder="ユーザー名">
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						X (旧Twitter)
+					</td>
+					<td>
+						<input type="text" id="X" name="x" placeholder="@ユーザーID">
+					</td>
+				</tr>
+				<tr>
+					<td class="as">
+						TikTok
+					</td>
+					<td>
+						<input type="text" id="TikTok" name="tiktok" placeholder="@ユーザーID">
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div id="error-message" class="space2"></div>
+		<button class="button" type="button" value="送信" onclick="validateForm()">送信</button>
+		<div class="space2"></div>
+	</div>
+
+	<audio id="ClickSound" src="sound/click_sound.mp3"></audio>
+	<script src="sound.js"></script>
+
+	<script src="signup_profile.js"></script>
+	<script>
+		var currentImageIndex = 0;
+		
+		// 初期表示
+		showImage(currentImageIndex);
+	</script>
+</body>
+
+</html>

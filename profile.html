@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!--ページ全体に共通のcss-->
+	<link rel="stylesheet" href="share.css">
+
+	<!--このページだけに共通のcss-->
+	<link rel="stylesheet" href="profile_share.css">
+
+	<!--PC用のcss-->
+	<link rel="stylesheet" media="(min-width: 601px)" href="profile_pc.css">
+
+	<!--スマホ用のcss-->
+	<link rel="stylesheet" media="(max-width: 600px)" href="profile_mobile.css">
+
+	<!--タイトル-->
+	<title>testtarouのプロフィール</title>
+</head>
+
+<body>
+	<div class="profile">
+		<h1>プロフィール</h1>
+		<div id="profile-img">
+			<img id="icon-image" src="image/icon/boy_01.png" alt="icon">
+		</div>
+		<div>
+			<label for="nickname">ニックネーム</label>
+			<div id="name" name="nickname">あいうえおあいうえお</div>
+		</div>
+		<div>
+			<label>学籍番号:</label>
+			<span>非公開</span>
+		</div>
+		<div>
+			<label>性別:</label>
+			<span>回答しない</span>
+		</div>
+		<div>
+			<label>血液型:</label>
+			<span>わからない</span>
+		</div>
+		<div>
+			<label for="hobby">趣味</label>
+			<ul name="hobby">
+				<li>テレビ・スマホゲーム</li>
+				<li>項目2</li>
+				<li>項目3</li>
+			</ul>
+		</div>
+		<div>
+			<label for="pf">自己紹介</label>
+			<div id="pr" name="pf">8年間書道をやってました。よろしくお願いします。</div>
+		</div>
+		<div id="profile-button">
+			<!--プロフィール編集ボタン-->
+			<button onclick="location.href='signup_profile.html'">プロフィール編集</button>
+			
+		</div>
+
+	</div>
+
+
+	<!-- ボタンのコンテナ -->
+	<div id="bottom-element">
+		<button class="under-button" onclick="subumit('home')">
+			<img class="formbutton" src="image/home.png" alt="ホーム">
+		</button>
+		<button class="under-button" onclick="subumit('match')">
+			<img class="formbutton" src="image/matching.png" alt="マッチング">
+		</button>
+		<button class="under-button" onclick="subumit('chat')">
+			<img class="formbutton" src="image/keijibann.png" alt="掲示板">
+		</button>
+		<button class="under-button" onclick="subumit('profile')">
+			<img class="formbutton" src="image/profile.png" alt="プロフィール">
+		</button>
+	</div>
+
+	<audio id="ClickSound" src="sound/click_sound.mp3"></audio>
+	<script src="sound.js"></script>
+
+	<script src="home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bairs.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="bairs.ico" type="image/x-icon">
+
+    <!-- ページ全体に共通の CSS -->
+    <link rel="stylesheet" href="share.css">
+
+    <!-- このページだけに共通の CSS -->
+    <link rel="stylesheet" href="passreset1_share.css">
+
+    <!-- タイトル -->
+    <title>パスワードリセット</title>
+</head>
+
+<body class="middle">
+    <!--このdivはコンテンツを縦並びに直すためのもの-->
+    <div>
+        <h1 class="center">パスワードリセット</h1>
+        <div id="progress">(1/3)</div>
+
+        <div>ユーザーIDを入力してください</div>
+
+        <input id="userid" type="text" name="userid" maxlength="50"
+            oninput="this.value=this.value.replace(/[^a-z0-9_@-]/g, '')">
+
+        <!-- エラーメッセージ -->
+        <div id="error-message" class="center"></div>
+
+        <div class="center">
+            <button type="button" onclick="search()">次へ</button>
+        </div>
+
+        <form id="form" action="/bairs/reset" method="post">
+            <input id="hidden" type="hidden" name="state">
+        </form>
+    </div>
+
+    <!--ここから先はaudio関連-->
+    <audio id="ClickSound" src="sound/click_sound.mp3"></audio>
+    <script src="sound.js"></script>
+
+    <script src="error.js"></script>
+    <script src="passreset1.js"></script>
+</body>
+
+</html>
